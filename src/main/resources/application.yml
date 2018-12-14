@@ -1,0 +1,24 @@
+server:
+  jsp-servlet:
+    init-parameters:
+      development: true
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.168.0.251:3306/student?useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  profiles:
+    active: test
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+mybatis:
+  type-aliases-package: com.baizhi.lpm.entity
+  mapper-locations: classpth:com/baizhi/lpm/mapper/*Mapper.xml
